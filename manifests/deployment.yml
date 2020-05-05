@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: kennychengpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: kennychengpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: kennychengpipelinesjavascriptdocker 
+          image: kennychengconreg.azurecr.io/kennychengpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
